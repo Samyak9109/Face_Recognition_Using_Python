@@ -1,0 +1,38 @@
+# ============================================================
+#  requirements.txt  —  Face Recognition Attendance System
+#  Python 3.12 only  (TF does not support 3.13/3.14 yet)
+#  Install:  python3 -m pip install -r requirements.txt
+# ============================================================
+
+# ── Web Backend ──────────────────────────────────────────────
+flask==3.1.3
+flask-cors==6.0.0
+flask-bcrypt==1.0.1
+python-dotenv==1.0.1
+
+# ── Database ─────────────────────────────────────────────────
+pymongo==4.7.3
+
+# ── Face Recognition Core ────────────────────────────────────
+deepface==0.0.93
+mtcnn==0.1.1
+opencv-python==4.9.0.80        # use this OR opencv-python-headless, not both
+scipy==1.13.1
+
+# ── Deep Learning Backend (pick ONE) ────────────────────────
+# Option A — TensorFlow (heavier, more compatible with deepface)
+tensorflow==2.16.2
+tf-keras==2.16.0
+
+# Option B — if tensorflow fails, comment above and uncomment below:
+# torch==2.3.1
+# torchvision==0.18.1
+
+# ── Data / Image ─────────────────────────────────────────────
+numpy==1.26.4
+pillow==10.3.0
+pandas==2.2.2
+openpyxl==3.1.4
+
+# ── Utilities ────────────────────────────────────────────────
+requests==2.32.3
